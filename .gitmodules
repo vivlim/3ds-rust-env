@@ -7,3 +7,6 @@
 [submodule "app"]
 	path = app
 	url = https://github.com/vivlim/rust3ds-template.git
+[submodule "alloc_system3ds"]
+	path = alloc_system3ds
+	url = https://github.com/vivlim/alloc_system3ds.git
