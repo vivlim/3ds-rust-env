@@ -1,0 +1,9 @@
+[submodule "ctru-rs"]
+	path = ctru-rs
+	url = https://github.com/vivlim/ctru-rs.git
+[submodule "rust-3ds-fork"]
+	path = rust-3ds-fork
+	url = git@github.com:vivlim/rust.git
+[submodule "app"]
+	path = app
+	url = git@github.com:vivlim/rust3ds-template.git
