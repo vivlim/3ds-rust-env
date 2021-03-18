@@ -15,10 +15,11 @@ There is almost certainly a better way to do this which doesn't require cross-re
 1. Install devkitPro & devkitArm
 2. Clone this repo
 3. Acquire submodules `git submodule init && git submodule update`
-4. Initialize the rust fork repo: `cd rust-3ds-fork; ./x.py`. Tests may fail to run, but you can ignore that.
+4. Initialize the rust fork repo: `cd rust-3ds-fork && git submodule init && git submodule update`. This will take a long time and use a bunch of disk space.
 5. `cd app` (or swap out `app` for your own repo based on it)
 6. Install a rust toolchain matching the commit that rust-3ds-fork is based on. Currently that's `rustc 1.51.0-nightly (04caa632d 2021-01-30)`, run something like `rustup override set nightly-2021-01-30`.
-7. `make` will build your project, and if all goes well, you should have a .3dsx file at `target/3ds/release/rust3ds-template.3dsx` which you can then run with the homebrew launcher.
+7. Install Xargo, `cargo install xargo`
+8. `make` will build your project, and if all goes well, you should have a .3dsx file at `target/3ds/release/rust3ds-template.3dsx` which you can then run with the homebrew launcher.
 
 ## Tips
 
