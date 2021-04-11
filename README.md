@@ -49,3 +49,6 @@ There is almost certainly a better way to do this which doesn't require cross-re
     - update the readme's setup instructions to have the new version
     - update Dockerfile so that has the new toolchain version
     - push and hope it works
+8. Update the example app's pipeline to use the new version of the image created & pushed by the github action in step 7
+9. Update this repo's submodule reference to the example app. Update this repo's main branch to point to the new nightly.
+10. Done!
