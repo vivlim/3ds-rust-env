@@ -9,7 +9,7 @@ RUN cd /build && git submodule init && git submodule update
 RUN cd /build/rust-3ds-fork && git submodule init && git submodule update
 
 FROM base as rust
-RUN curl https://sh.rustup.rs -sSf | sh -s -- -y --default-toolchain nightly-2021-01-30
+RUN curl https://sh.rustup.rs -sSf | sh -s -- -y --default-toolchain nightly-2021-03-25
 ENV PATH=${PATH}:/root/.cargo/bin
 RUN apt update && apt install build-essential -y
 RUN cargo install xargo

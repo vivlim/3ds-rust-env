@@ -40,4 +40,11 @@ There is almost certainly a better way to do this which doesn't require cross-re
 4. Resolve merge conflicts. Make liberal use of conditional compilation (such as `#[cfg(target_os = "horizon")]`) to reduce the amount of drift between the fork code and upstream linux/unix.
     - fix build breaks, I like to do that in a second commit after committing the resolved merge.
 5. Update submodules; `git submodule update`
-5. `make cleanenv` to clean up the previous rust-3ds-fork, then `make` to rebuild everything.
+6. `make cleanenv` to clean up the previous rust-3ds-fork, then `make` to rebuild everything.
+7. When that all works, update the docker container and this environment:
+    - new branch for the nightly, such as `nightly-2021-03-25`. this will become part of the docker image's tag
+    - make sure rust-3ds-fork is committed and pushed
+    - update this repo's reference to it
+    - update the readme's setup instructions to have the new version
+    - update Dockerfile so that it installs the correct toolchain
+    - push and hope it works
