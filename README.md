@@ -42,9 +42,10 @@ There is almost certainly a better way to do this which doesn't require cross-re
 5. Update submodules; `git submodule update`
 6. `make cleanenv` to clean up the previous rust-3ds-fork, then `make` to rebuild everything.
 7. When that all works, update the docker container and this environment:
-    - new branch for the nightly, such as `nightly-2021-03-25`. this will become part of the docker image's tag
+    - new branch for the nightly, such as `nightly-2021-03-25`. this will become part of the docker image's tag. the name should match the toolchain version, as the Dockerfile will check it out.
+        - The docker build checks out the repo again so that it can init and update submodules independent of the outer repo.
     - make sure rust-3ds-fork is committed and pushed
     - update this repo's reference to it
     - update the readme's setup instructions to have the new version
-    - update Dockerfile so that it installs the correct toolchain
+    - update Dockerfile so that has the new toolchain version
     - push and hope it works
