@@ -1,3 +1,5 @@
+# update 4/14/2023: [there have been updates in the upstream rust3ds since I cobbled this together, so you should probably go there instead!](https://github.com/orgs/rust3ds/)
+
 # Rust on Nintendo 3ds
 
 This repo contains submodules with most of the pieces you need to build 3ds homebrew apps in Rust.
